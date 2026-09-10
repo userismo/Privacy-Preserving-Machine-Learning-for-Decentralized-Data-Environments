@@ -1,0 +1,26 @@
+project_name: DecentraPrivML-Bench
+seeds:
+- 7
+- 21
+- 42
+- 84
+- 126
+data:
+  test_size: 0.25
+  num_clients: 10
+  dirichlet_alpha: 0.45
+  min_client_size: 12
+  privacy_stress_noise_features: 250
+  noise_feature_scale: 1.0
+training:
+  rounds: 30
+  local_epochs: 5
+  learning_rate: 0.05
+  batch_size: 32
+  l2: 0.0
+  client_fraction: 0.7
+privacy:
+  clipping_norm: 0.7
+  central_noise_moderate: 0.2
+  central_noise_strong: 0.8
+  local_noise: 0.08

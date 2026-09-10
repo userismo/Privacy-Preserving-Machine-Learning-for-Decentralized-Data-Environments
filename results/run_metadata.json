@@ -1,0 +1,15 @@
+{
+  "dataset": "scikit-learn breast cancer diagnostic dataset with configured nuisance features",
+  "num_seeds": 5,
+  "methods": [
+    "Centralized",
+    "FedAvg",
+    "Secure FedAvg",
+    "DP-FedAvg (moderate)",
+    "DP-FedAvg (strong)",
+    "GossipAvg",
+    "Local-DP Gossip"
+  ],
+  "formal_dp_guarantee_claimed": false,
+  "secure_aggregation_is_cryptographic": false
+}
