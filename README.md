@@ -26,71 +26,6 @@ Keeping records on client devices or inside organizations reduces raw-data expos
 - Unit tests, Docker support, and GitHub Actions CI
 - Jupyter analysis notebook
 
-## Repository structure
-
-```text
-DecentraPrivML-Bench/
-├── configs/default.yaml
-├── docs/
-│   ├── architecture.md
-│   ├── methodology.md
-│   └── threat_model.md
-├── examples/flower_strategy_snippet.py
-├── notebooks/results_analysis.ipynb
-├── reports/
-│   ├── executive_summary.md
-│   ├── final_report.md
-│   └── references.md
-├── results/
-│   ├── all_runs.csv
-│   ├── benchmark_summary.csv
-│   ├── client_partitions.csv
-│   ├── framework_comparison.csv
-│   ├── round_history.csv
-│   └── plots/
-├── scripts/
-│   ├── generate_report.py
-│   └── run_experiments.py
-├── src/decentraprivml/
-├── tests/
-├── Dockerfile
-├── docker-compose.yml
-├── Makefile
-└── pyproject.toml
-```
-
-## Quick start
-
-### Linux/macOS
-
-```bash
-python -m venv .venv
-source .venv/bin/activate
-python -m pip install --upgrade pip
-pip install -e .[dev]
-python -m decentraprivml.cli run --config configs/default.yaml --output results
-python scripts/generate_report.py
-pytest -q
-```
-
-### Windows PowerShell
-
-```powershell
-python -m venv .venv
-.\.venv\Scripts\Activate.ps1
-python -m pip install --upgrade pip
-pip install -e ".[dev]"
-python -m decentraprivml.cli run --config configs/default.yaml --output results
-python scripts/generate_report.py
-pytest -q
-```
-
-### Docker
-
-```bash
-docker compose up --build
-```
-
 
 ## Included benchmark results
 
@@ -148,7 +83,4 @@ Start with:
 ## Framework choice in one paragraph
 
 Flower is a strong general-purpose choice for framework-agnostic FL experiments and deployment. TensorFlow Federated is suited to TensorFlow-native algorithm research. OpenFL is oriented toward cross-silo collaborations with infrastructure security controls. PySyft focuses on governed remote data science, code approval, and controlled result release. The included reference simulator is useful before committing to one of these heavier platforms.
-
-## License
-
-MIT. See `LICENSE`.
+LICENSE`.
